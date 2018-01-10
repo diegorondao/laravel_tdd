@@ -3238,6 +3238,7 @@ return array(
     'laravel_tdd\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
     'laravel_tdd\\Http\\Controllers\\Auth\\RegisterController' => $baseDir . '/app/Http/Controllers/Auth/RegisterController.php',
     'laravel_tdd\\Http\\Controllers\\Auth\\ResetPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ResetPasswordController.php',
+    'laravel_tdd\\Http\\Controllers\\CommentController' => $baseDir . '/app/Http/Controllers/CommentController.php',
     'laravel_tdd\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'laravel_tdd\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'laravel_tdd\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',

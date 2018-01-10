@@ -21,3 +21,25 @@ $factory->define(laravel_tdd\User::class, function (Faker $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(laravel_tdd\Post::class, function (Faker $faker) {
+	return [
+        'user_id' => function(){
+            return factory('laravel_tdd\User')->create()->id;
+        },
+        'title' => $faker->sentence,
+        'body' => $faker->paragraph
+    ];
+});
+
+$factory->define(laravel_tdd\Comment::class, function (Faker $faker) {
+	return [
+	        'user_id' => function(){
+	            return factory('laravel_tdd\User')->create()->id;
+	        },
+	        'post_id' => function(){
+	            return factory('laravel_tdd\Post')->create()->id;
+	        },
+	        'body' => $faker->paragraph
+	    ];
+});
