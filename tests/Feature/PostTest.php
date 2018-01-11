@@ -9,6 +9,8 @@ use PDO;
 
 class PostTest extends TestCase
 {	
+    use RefreshDatabase;
+    
 	private $comment;
 
 	protected function setUp()

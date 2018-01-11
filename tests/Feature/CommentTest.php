@@ -10,16 +10,19 @@ use URL;
 
 class CommentTest extends TestCase
 {
-    // public function test_lista_comment()
-    // {
-	   //  $response = $this->get(URL::secure('/comment'));
-	   //  dd($response);
-	   //  $response->assertStatus(200);
-    // }
-    public function test_create_comment()
+    use RefreshDatabase;
+
+    public function test_lista_comment()
     {
-        $post = factory('laravel_tdd\User')->create();
+        $comment = factory('laravel_tdd\Comment')->create();
         $response = $this->get('/comment');
-        $response->assertSee($post->title); // expect to see post
+        $response->assertSee($comment->body);
     }
+    
+    // public function test_create_comment()
+    // {
+    //     $post = factory('laravel_tdd\Post')->create();
+    //     $response = $this->get('/comment');
+    //     $response->assertSee($post->body); 
+    // }
 }
