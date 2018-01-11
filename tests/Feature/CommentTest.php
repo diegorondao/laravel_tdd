@@ -11,18 +11,24 @@ use URL;
 class CommentTest extends TestCase
 {
     use RefreshDatabase;
+    
+    private $comment;
+
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->comment = factory('laravel_tdd\Comment')->create();
+    }
 
     public function test_lista_comment()
     {
-        $comment = factory('laravel_tdd\Comment')->create();
         $response = $this->get('/comment');
-        $response->assertSee($comment->body);
+        $response->assertSee($this->comment->body);
     }
     
-    // public function test_create_comment()
-    // {
-    //     $post = factory('laravel_tdd\Post')->create();
-    //     $response = $this->get('/comment');
-    //     $response->assertSee($post->body); 
-    // }
+    public function test_list_unique_comment()
+    {
+        $response = $this->get('/comment/ '. $this->comment->body);
+        $response->assertSee($this->comment->body); 
+    }
 }

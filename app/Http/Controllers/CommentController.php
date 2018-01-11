@@ -3,7 +3,6 @@
 namespace laravel_tdd\Http\Controllers;
 
 use Illuminate\Http\Request;
-use laravel_tdd\Post;
 use laravel_tdd\Comment;
 
 // Lista todas as tabelas do SQLITE	
@@ -15,5 +14,9 @@ class CommentController extends Controller
     	$comments = $comment::latest()->get();
     	return view('comment.index')->with(['comments'=>$comments]);
     }
+    
+    public function show(Comment $comment){
+      return view('comment.show')->with(['comment'=>$comment]);
+ 	}
     
 }

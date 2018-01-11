@@ -6,7 +6,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 /* COMMENT */
 Route::get('/comment', 'CommentController@index')->name('comment-index');
+Route::get('/comment/{post}', 'CommentController@edit')->name('comment-edit');
+
+
