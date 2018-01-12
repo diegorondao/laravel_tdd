@@ -5,46 +5,39 @@ namespace Tests\Feature;
 use Tests\TestCase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use PDO;
+use DatabaseMigrations;
 
 class PostTest extends TestCase
-{	
+{
     use RefreshDatabase;
     
-	private $comment;
+    private $post;
+    private $comment;
 
-	protected function setUp()
-	{
-		parent::setUp();
-	}
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->post = factory('laravel_tdd\Post')->create();
+        $this->comment = factory('laravel_tdd\Comment')->create(['post_id'=>$this->post->id]);
+    }
+
+    public function test_lista_post()
+    {
+        $response = $this->get('/post');
+        $response->assertSee($this->post->title);
+    }
     
-    public function testExample()
+    public function test_list_unique_post()
     {
-        $this->assertTrue(true);
+        $response = $this->get('/post/ '. $this->post->id);
+        $this->assertEquals('200', $response->getStatusCode());
+        $response->assertSee($this->post->title); 
     }
-    
-    public function test_lista_comment()
+    public function test_post_list_comments_single_post()
     {
-    	$this->assertTrue(true);	
+        $response = $this->get('/post/ '. $this->post->id);
+        $this->assertEquals('200', $response->getStatusCode());
     }
-
-    public function test_create_comment()
-    {
-    	$this->assertTrue(true);	
-    }
-
-    public function test_update_comment()
-    {
-    	$this->assertTrue(true);	
-    }
-
-    public function test_delete_comment()
-    {
-    	$this->assertTrue(true);	
-    }
-
-    protected function tearDown()
-    {
-    	parent::tearDown();
-    }
+// Lista todas as tabelas do SQLITE 
+//DB::select('select * from sqlite_master where type="table"')
 }
