@@ -3548,6 +3548,8 @@ class ComposerStaticInit2e04e351c7086988ba23876aaa0c5cfd
         'laravel_tdd\\Http\\Controllers\\CommentController' => __DIR__ . '/../..' . '/app/Http/Controllers/CommentController.php',
         'laravel_tdd\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'laravel_tdd\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'laravel_tdd\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
+        'laravel_tdd\\Http\\Controllers\\UsuariosController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/UsuariosController.php',
         'laravel_tdd\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'laravel_tdd\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'laravel_tdd\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',

@@ -3243,6 +3243,8 @@ return array(
     'laravel_tdd\\Http\\Controllers\\CommentController' => $baseDir . '/app/Http/Controllers/CommentController.php',
     'laravel_tdd\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'laravel_tdd\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'laravel_tdd\\Http\\Controllers\\PostController' => $baseDir . '/app/Http/Controllers/PostController.php',
+    'laravel_tdd\\Http\\Controllers\\UsuariosController' => $baseDir . '/app/Http/Controllers/Api/UsuariosController.php',
     'laravel_tdd\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'laravel_tdd\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'laravel_tdd\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',
