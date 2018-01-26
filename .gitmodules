@@ -1,0 +1,6 @@
+[submodule "vendor/lcobucci/jwt"]
+	path = vendor/lcobucci/jwt
+	url = https://github.com/lcobucci/jwt.git
+[submodule "vendor/tymon/jwt-auth"]
+	path = vendor/tymon/jwt-auth
+	url = https://github.com/tymondesigns/jwt-auth.git
