@@ -7,8 +7,9 @@ Route::get('/', function () {
 Auth::routes();
 
 /* POST */
-Route::get('/post', 'PostController@index')->name('post-index');
-Route::get('/post/{post}', 'PostController@show')->name('post-show');
+
+// Route::get('/post', 'PostController@index')->name('post-index');
+// Route::get('/post/{post}', 'PostController@show')->name('post-show');
 
 /* COMMENT */
 Route::get('/comment', 'CommentController@index')->name('comment-index');

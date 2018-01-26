@@ -42,8 +42,8 @@ return [
         ],
 
         'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
+            'driver' => 'jwt',
+            'provider' => 'usuarios',
         ],
     ],
 
@@ -68,6 +68,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => laravel_tdd\User::class,
+        ],
+        'usuarios' => [
+            'driver' => 'eloquent',
+            'model' => laravel_tdd\Domains\Usuarios\Entity::class,
+            'table' => 'usuarios',
         ],
 
         // 'users' => [
