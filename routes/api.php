@@ -18,3 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::post('user_externo/login', 'AuthController@authenticate');
 Route::post('/post', 'PostController@index')->name('post-index');
+
+// Route::group(['middleware' => 'jwt.auth'], function () {
+//     Route::get('user', 'UserController@getAuthUser');
+// });

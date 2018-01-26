@@ -3379,6 +3379,7 @@ return array(
     'laravel_tdd\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'laravel_tdd\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'laravel_tdd\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'laravel_tdd\\Http\\Middleware\\VerifyJWTToken' => $baseDir . '/app/Http/Middleware/VerifyJWTToken.php',
     'laravel_tdd\\Post' => $baseDir . '/app/Post.php',
     'laravel_tdd\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'laravel_tdd\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',

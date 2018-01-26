@@ -4,18 +4,25 @@ namespace laravel_tdd\Http\Controllers;
 
 use Illuminate\Http\Request;
 use laravel_tdd\Post;
+use Tymon\JWTAuth\Facades\JWTAuth;
+use Tymon\JWTAuth\Exceptions\JWTException;
+use JWTAuthException;
 
 class PostController extends Controller
 {
 	public function __construct()
 	{
         $this->middleware('jwt.auth', ['except' => ['store', 'show', 'create']]);
+
     }
-	public function index()
+    
+	public function index(Request $request)
     {
-    	dd("asdadsad");
-    	$posts = $post::latest()->get();
-    	return view('post.index')->with(['posts'=>$posts]);
+    	$user = JWTAuth::toUser($request->token);
+        return response()->json(['result' => $user]);
+    	// $post = new Post();
+    	// $posts = $post::latest()->get();
+    	// return view('post.index')->with(['posts'=>$posts]);
     }
     
     public function show(Post $post){

@@ -27,9 +27,6 @@ return [
 
     'secret' => env('JWT_SECRET'),
 
-    'usuarios' => 'laravel_tdd\Domains\Usuarios\Entity',
-    'identifier' => 'id',
-
     /*
     |--------------------------------------------------------------------------
     | JWT Authentication Keys

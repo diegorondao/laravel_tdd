@@ -2,20 +2,14 @@
 
 namespace laravel_tdd\Domains\Usuarios;
 
-use Illuminate\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\SoftDeletes;
-use Illuminate\Database\Eloquent\Model;
 use Tymon\JWTAuth\Contracts\JWTSubject;
-use Illuminate\Auth\Passwords\CanResetPassword;
-use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
-use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class Entity extends Model implements JWTSubject, AuthenticatableContract, CanResetPasswordContract
+class Entity extends Authenticatable implements JWTSubject
 {
-    use SoftDeletes, Authenticatable, CanResetPassword;
     
     protected $table = 'usuarios';
-    public $timestamps = false;
     protected $primaryKey = 'id';
     protected $fillable = [
         'id',

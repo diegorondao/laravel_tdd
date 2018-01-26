@@ -8,12 +8,12 @@ use laravel_tdd\Domains\Usuarios\Entity as Usuarios;
 use laravel_tdd\Http\Requests;
 use laravel_tdd\Http\Controllers\Controller;
 use JWTAuth;
-use Hash;
 
 class AuthController extends Controller
 {
 	public function authenticate(Request $request)
 	{
+		
     	// Get only email and password from request
       	$credentials = $request->only('email', 'externo_id');
 	    
@@ -21,7 +21,14 @@ class AuthController extends Controller
 	    $usuarios = Usuarios::where('email', $credentials['email'])->first();
 		
 		// Generate Token
-		$token = JWTAuth::fromUser($usuarios);
+		try {
+			
+			if (!$token = JWTAuth::fromUser($usuarios)) {
+				return response()->json(['error' => 'invalid_credentials'], 401);
+			}
+		} catch (JWTException $e) {
+			return response()->json(['error' => 'could_not_create_token'], 500);
+		}
 
 		// Get expiration time
 		$objectToken = JWTAuth::setToken($token);
