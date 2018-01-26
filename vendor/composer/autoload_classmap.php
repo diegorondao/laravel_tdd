@@ -3364,6 +3364,7 @@ return array(
     'laravel_tdd\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'laravel_tdd\\Domains\\Usuarios\\Entity' => $baseDir . '/app/Domains/Usuarios/Entity.php',
     'laravel_tdd\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'laravel_tdd\\Http\\Controllers\\Api\\UsuariosController' => $baseDir . '/app/Http/Controllers/Api/UsuariosController.php',
     'laravel_tdd\\Http\\Controllers\\AuthController' => $baseDir . '/app/Http/Controllers/AuthController.php',
     'laravel_tdd\\Http\\Controllers\\Auth\\ForgotPasswordController' => $baseDir . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
     'laravel_tdd\\Http\\Controllers\\Auth\\LoginController' => $baseDir . '/app/Http/Controllers/Auth/LoginController.php',
@@ -3373,10 +3374,6 @@ return array(
     'laravel_tdd\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'laravel_tdd\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
     'laravel_tdd\\Http\\Controllers\\PostController' => $baseDir . '/app/Http/Controllers/PostController.php',
-<<<<<<< HEAD
-    'laravel_tdd\\Http\\Controllers\\UsuariosController' => $baseDir . '/app/Http/Controllers/Api/UsuariosController.php',
-=======
->>>>>>> jwt_add
     'laravel_tdd\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'laravel_tdd\\Http\\Middleware\\EncryptCookies' => $baseDir . '/app/Http/Middleware/EncryptCookies.php',
     'laravel_tdd\\Http\\Middleware\\RedirectIfAuthenticated' => $baseDir . '/app/Http/Middleware/RedirectIfAuthenticated.php',

@@ -15,8 +15,7 @@ class RouteServiceProvider extends ServiceProvider
      * @var string
      */
     protected $namespace = 'laravel_tdd\Http\Controllers';
-    protected $namespaceApi = 'laravel_tdd\Http\Controllers\Api';
-
+    
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -68,7 +67,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         Route::prefix('api')
              ->middleware('api')
-             ->namespace($this->namespaceApi)
+             ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
 }

@@ -3698,6 +3698,7 @@ class ComposerStaticInit2e04e351c7086988ba23876aaa0c5cfd
         'laravel_tdd\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'laravel_tdd\\Domains\\Usuarios\\Entity' => __DIR__ . '/../..' . '/app/Domains/Usuarios/Entity.php',
         'laravel_tdd\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'laravel_tdd\\Http\\Controllers\\Api\\UsuariosController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/UsuariosController.php',
         'laravel_tdd\\Http\\Controllers\\AuthController' => __DIR__ . '/../..' . '/app/Http/Controllers/AuthController.php',
         'laravel_tdd\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'laravel_tdd\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -3707,10 +3708,6 @@ class ComposerStaticInit2e04e351c7086988ba23876aaa0c5cfd
         'laravel_tdd\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'laravel_tdd\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'laravel_tdd\\Http\\Controllers\\PostController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostController.php',
-<<<<<<< HEAD
-        'laravel_tdd\\Http\\Controllers\\UsuariosController' => __DIR__ . '/../..' . '/app/Http/Controllers/Api/UsuariosController.php',
-=======
->>>>>>> jwt_add
         'laravel_tdd\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'laravel_tdd\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'laravel_tdd\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',

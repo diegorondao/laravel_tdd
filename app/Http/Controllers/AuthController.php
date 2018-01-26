@@ -13,7 +13,6 @@ class AuthController extends Controller
 {
 	public function authenticate(Request $request)
 	{
-		
     	// Get only email and password from request
       	$credentials = $request->only('email', 'externo_id');
 	    
