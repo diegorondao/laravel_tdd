@@ -18,18 +18,8 @@ class PostController extends Controller
     
 	public function index(Request $request)
     {
-        # FORMA 1 #
-        // $user = Auth::guard('api')->user(); 
-        // return response()->json(['me' => $user]);
-     
-        # FORMA 2 #
         $user = JWTAuth::toUser($request->token);
         return response()->json(['result' => $user]);
-    	
-        # FORMA 3 #
-        // $post = new Post();
-    	// $posts = $post::latest()->get();
-    	// return view('post.index')->with(['posts'=>$posts]);
     }
     
     public function show(Post $post){
