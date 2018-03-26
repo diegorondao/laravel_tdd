@@ -42,7 +42,7 @@ return [
         ],
         'api' => [
             'driver' => 'jwt',
-            'provider' => 'usuarios',
+            'provider' => 'users',
         ],
     ],
 
@@ -69,11 +69,6 @@ return [
             'driver' => 'eloquent',
             'model' => laravel_tdd\Domains\Usuarios\Entity::class, //Alterar o model que valida
         ],        
-        'usuarios' => [
-            'driver' => 'eloquent',
-            'model' => laravel_tdd\Domains\Usuarios\Entity::class,
-            'table' => 'usuarios',
-        ],
         
 
         // 'users' => [

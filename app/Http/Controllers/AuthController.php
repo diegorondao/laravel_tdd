@@ -3,7 +3,6 @@
 namespace laravel_tdd\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use laravel_tdd\Domains\Usuarios\Entity as Usuarios;
 use laravel_tdd\Http\Requests;
 use laravel_tdd\Http\Controllers\Controller;
@@ -38,5 +37,5 @@ class AuthController extends Controller
 			'token_type' => 'bearer',
 			'expires_in' => $expiration,
 			]);
-		}
+	}
 }
